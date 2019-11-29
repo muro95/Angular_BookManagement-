@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">View</h3>
+  </div>
+  <div class="panel-body">
+    <button type = "button" class="btn btn-danger"[routerLink]="['/books']">List</button>
+    <table class="table table-bordered table-hover" [style.margin-top.px]="15">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngIf="book">
+        <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.description}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
